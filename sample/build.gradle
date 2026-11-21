@@ -1,11 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 29
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+  }
+    namespace 'cn.cricin.folivora.sample'
+    compileSdk 34
   defaultConfig {
     applicationId "cn.cricin.folivora.sample"
-    minSdkVersion 16
-    targetSdkVersion 29
+    minSdk 16
+    targetSdk 34
     versionCode 1
     versionName "1.0"
   }
@@ -14,6 +19,7 @@ android {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+    
   }
 }
 
@@ -27,3 +33,6 @@ task copyApkToRootDir(type: Copy) {
   into("$rootProject.projectDir")
   rename '-debug', ''
 }
+
+
+

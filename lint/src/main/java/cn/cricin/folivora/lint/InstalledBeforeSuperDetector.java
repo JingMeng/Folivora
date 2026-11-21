@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (C) 2019 Cricin
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -52,7 +52,7 @@ public final class InstalledBeforeSuperDetector extends Detector implements Sour
 
   private static final String INSTALL_METHOD = "installViewFactory";
   private static final String TYPE_FOLIVORA = "cn.cricin.folivora.Folivora";
-  private static final String LEGACY_COMPAT_ACTIVITY = "android.support.v7.app.AppCompatActivity";
+  private static final String LEGACY_COMPAT_ACTIVITY = "androidx.appcompat.app.AppCompatActivity";
   private static final String COMPAT_ACTIVITY = "androidx.appcompat.app.AppCompatActivity";
 
   @Nullable
@@ -131,3 +131,4 @@ public final class InstalledBeforeSuperDetector extends Detector implements Sour
     }
   }
 }
+

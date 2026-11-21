@@ -1,3 +1,6 @@
 include ':sample'
 include ':folivora'
-include ':lint'
+// The optional IDE lint/preview plugin requires a separately configured Android Studio installation.
+if (providers.gradleProperty('withIdeLint').map { it.toBoolean() }.getOrElse(false)) {
+  include ':lint'
+}
